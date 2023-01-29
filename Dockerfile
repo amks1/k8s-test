@@ -10,4 +10,4 @@ RUN pip install -r requirements.txt -c constraints.txt
 # copy the rest of our application
 COPY . .
 
-CMD ["uwsgi", "--ini" "./uwsgi/uwsgi.ini"]
+CMD ["uwsgi", "--ini", "./uwsgi/uwsgi.ini"]
