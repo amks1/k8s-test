@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-test1
+spec:
+  selector:
+    matchLabels:
+      app: k8s-test1
+  template:
+    metadata:
+      labels:
+        app: k8s-test1
+    spec:
+      containers:
+      - name: k8s-test1
+        image: amks1/k8s_test:v2
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "250m"
+        ports:
+        - containerPort: 7654
