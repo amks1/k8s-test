@@ -23,7 +23,7 @@ app = create_app()
 
 @app.route('/')
 def index():
-	return f"Hello World!<br>env:{os.environ.get('HOSTNAME')}<br>socket.hostname:{socket.gethostname()}<br>platform.node:{platform.node()}"
+	return f"Version2: Hello World!<br>env:{os.environ.get('HOSTNAME')}<br>socket.hostname:{socket.gethostname()}<br>platform.node:{platform.node()}"
 
 
 # app.run(host='0.0.0.0', port=7654)	## Uncomment for local testing
